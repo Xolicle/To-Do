@@ -136,7 +136,9 @@ dialog {
       font-size: 16px;
     }
     & select {
-      margin-bottom: 10px;
+      margin: 0 0 10px 10px;
+      width: 150px;
+      height: 30px;
     }
     & .saveAndCancel {
       display: flex;
