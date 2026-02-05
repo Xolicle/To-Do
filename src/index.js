@@ -38,8 +38,10 @@ form.appendChild(priorityP);
 const priority = document.createElement("select");
 const priorityLabel = document.createElement("label");
 priorityLabel.textContent = "Priority";
+priorityLabel.htmlFor = "priority";
 priorityP.appendChild(priorityLabel);
 priorityP.appendChild(priority);
+priority.id = "priority";
 const highPriority = document.createElement("option");
 highPriority.innerHTML = "High";
 const mediumPriority = document.createElement("option");
@@ -60,18 +62,25 @@ const dateString = new Date(now.getTime() - now.getTimezoneOffset() * 60000)
 
 dueDate.setAttribute("min", dateString);
 dueDate.value = dateString;
+dueDate.id = "dueDate";
 priorityP.appendChild(dueDate);
 const notes = document.createElement("textarea");
+notes.rows = "5";
+notes.cols = "20";
+notes.id = "notes";
 form.appendChild(notes);
 const btnDiv = document.createElement("div");
 form.appendChild(btnDiv);
-const cancelBtn = document.createElement("button");
-cancelBtn.textContent = "Cancel";
-btnDiv.appendChild(cancelBtn);
+
 const saveBtn = document.createElement("button");
 saveBtn.textContent = "Save";
-
+saveBtn.id = "save";
 btnDiv.appendChild(saveBtn);
+const cancelBtn = document.createElement("button");
+cancelBtn.textContent = "Cancel";
+cancelBtn.id = "cancel";
+btnDiv.appendChild(cancelBtn);
+btnDiv.className = "saveAndCancel";
 document.body.appendChild(dialog);
 addTask.addEventListener("click", () => {
   dialog.showModal();

@@ -2,6 +2,6 @@
 
 Odin Project JavaScript Todo list
 
-# "test": "echo \"Error: no test specified\" && exit 1",
+#
 
-# remove the above from package.json in scripts
+I'm going to use localStorage to save data on user's computer.
